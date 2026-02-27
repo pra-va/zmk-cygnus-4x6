@@ -1,12 +1,11 @@
 #include "cygnus.dtsi" // Notice that the main dtsi files are included in the overlay.
 
 &kscan0 {
-    col-gpios
-        = <&pro_micro 21 GPIO_ACTIVE_HIGH> // col1 in the schematic
-        , <&pro_micro 20 GPIO_ACTIVE_HIGH> // col2 in the schematic
-        , <&pro_micro 19 GPIO_ACTIVE_HIGH> // col3 in the schematic
-        , <&pro_micro 18 GPIO_ACTIVE_HIGH> // col4 in the schematic
-        , <&pro_micro 15 GPIO_ACTIVE_HIGH> // col5 in the schematic
-        , <&pro_micro 14 GPIO_ACTIVE_HIGH> // col6 in the schematic
-        ;
+    col-gpios =
+        <&xiao_d 0 GPIO_ACTIVE_HIGH>,  /* 1 */
+        <&xiao_d 1 GPIO_ACTIVE_HIGH>,  /* 2 */
+        <&xiao_d 2 GPIO_ACTIVE_HIGH>,  /* 3 */
+        <&xiao_d 3 GPIO_ACTIVE_HIGH>,  /* 4 */
+        <&xiao_d 4 GPIO_ACTIVE_HIGH>,  /* 5 */
+        <&xiao_d 5 GPIO_ACTIVE_HIGH>;  /* 6 */
 };
