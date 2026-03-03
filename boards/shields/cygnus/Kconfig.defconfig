@@ -8,7 +8,7 @@ config ZMK_KEYBOARD_NAME
 
 endif
 
-# if SHIELD_CYGNUS_LEFT && SHIELD_CYGNUS_RIGHT
+# if SHIELD_CYGNUS_LEFT || SHIELD_CYGNUS_RIGHT
 # 
 # config ZMK_SPLIT
 #     default y
