@@ -4,7 +4,100 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <38 39>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <38 40>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        screenshot {
+            bindings = <&kp LG(LA(C))>;
+            key-positions = <38 39 40>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        left_parantheses {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <28 29>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        right_parantheses {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <30 31>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <40 41>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <42 43>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <16 17>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <18 19>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        less_then {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <4 5>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        greater_than {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <6 7>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <31 32 33>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <28 27 26>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+    };
 
     behaviors {
         ht_hyper: hold_tap_hyper {
