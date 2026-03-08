@@ -189,6 +189,18 @@
             bindings = <&kp FSLH &kp STAR &kp STAR &kp ENTER>;
             label = "JAVADOC";
         };
+
+        jiggle: jiggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT &mmv MOVE_LEFT>,
+                <&macro_wait_time 1000>,
+                <&mmv MOVE_RIGHT &mmv MOVE_RIGHT &mmv MOVE_RIGHT>,
+                <&macro_wait_time 1000>;
+
+            label = "JIGGLE";
+        };
     };
 
     keymap {
