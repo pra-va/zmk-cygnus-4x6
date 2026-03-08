@@ -141,6 +141,22 @@
 
             tapping-term-ms = <145>;
         };
+
+        td_tab_caps: td_tab_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&to 5>;
+        };
+    };
+
+    macros {
+        esc_to_base: esc_to_base {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &to 0>;
+            label = "ESC_TO_BASE";
+        };
     };
 
     keymap {
@@ -156,7 +172,7 @@
 
             bindings = <
 &kp GRAVE                       &kp N1             &kp N2            &kp N3            &kp N4              &kp N5        &kp N6            &kp N7              &kp N8             &kp N9             &kp N0                      &kp EQUAL
-&kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T         &kp Y             &kp U               &kp I              &kp O              &kp P                       &kp MINUS
+&td_tab_caps                    &kp Q              &kp W             &kp E             &kp R               &kp T         &kp Y             &kp U               &kp I              &kp O              &kp P                       &kp MINUS
 &ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G         &kp H             &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
 &kp LC(SPACE)                   &kp Z              &kp X             &kp C             &kp V               &kp B         &kp N             &kp M               &kp COMMA          &kp DOT            &kp SLASH                   &kp BACKSLASH
                                                                      &mo 1             &lt 3 SPACE         &kp LSHIFT    &lt 2 LEFT_SHIFT  &kp BACKSPACE       &mo 4
@@ -213,6 +229,16 @@
 &trans        &kp LCTRL     &kp LALT      &kp LGUI           &kp LSHFT        &trans        &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp ENTER  &trans
 &trans        &kp C_PP      &kp C_PREV    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans     &trans
                                           &mkp LCLK          &mkp MCLK        &mkp RCLK     &trans          &trans          &trans
+            >;
+        };
+
+        caps {
+            bindings = <
+&trans        &trans     &trans     &trans     &trans     &trans            &trans     &trans     &trans     &trans     &trans     &trans
+&trans        &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)         &kp LS(Y)  &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)  &trans
+&esc_to_base  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)         &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &trans     &trans
+&trans        &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)         &kp LS(N)  &kp LS(M)  &trans     &trans     &trans     &trans
+                                    &trans     &kp SPACE  &kp UNDERSCORE    &trans     &trans     &trans
             >;
         };
     };
