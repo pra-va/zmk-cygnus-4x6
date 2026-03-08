@@ -161,14 +161,18 @@
         lambda: lambda {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp MINUS &kp GT>;
+            bindings = <&kp SPACE &kp MINUS &kp GT &kp SPACE>;
             label = "LAMBDA";
         };
 
         full_lambda: full_lambda {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp MINUS &kp GT &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LS(LEFT_ARROW) &kp LS(LEFT_ARROW)>;
+            bindings =
+                <&kp LPAR &kp RPAR &kp SPACE &kp MINUS &kp GT &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW>,
+                <&macro_wait_time 40>,
+                <&kp LS(LEFT_ARROW) &kp LS(LEFT_ARROW)>;
+
             label = "FULL_LAMBDA";
         };
 
