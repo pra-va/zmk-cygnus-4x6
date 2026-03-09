@@ -182,6 +182,13 @@
 
             label = "JIGGLE";
         };
+
+        java_constant: java_constant {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp P &kp U &kp B &kp L &kp I &kp C &kp SPACE &kp S &kp T &kp A &kp T &kp I &kp C &kp SPACE &kp F &kp I &kp N &kp A &kp L &kp SPACE>;
+            label = "JAVA_CONSTANT";
+        };
     };
 
     keymap {
@@ -259,11 +266,11 @@
 
         caps {
             bindings = <
-&trans        &trans     &trans     &trans     &trans     &trans            &trans     &trans     &trans     &trans     &trans     &trans
-&esc_to_base  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)         &kp LS(Y)  &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)  &trans
-&to 0         &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)         &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &trans     &trans
-&trans        &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)         &kp LS(N)  &kp LS(M)  &trans     &trans     &trans     &trans
-                                    &trans     &kp SPACE  &kp UNDERSCORE    &trans     &trans     &trans
+&trans          &trans     &trans     &trans     &trans     &trans            &trans     &trans     &trans     &trans     &trans     &trans
+&esc_to_base    &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)         &kp LS(Y)  &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)  &trans
+&to 0           &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)         &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &trans     &trans
+&java_constant  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)         &kp LS(N)  &kp LS(M)  &trans     &trans     &trans     &trans
+                                      &trans     &kp SPACE  &kp UNDERSCORE    &trans     &trans     &trans
             >;
         };
     };
