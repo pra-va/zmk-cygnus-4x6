@@ -97,6 +97,20 @@
             require-prior-idle-ms = <200>;
             layers = <0 1 2 3 4>;
         };
+
+        lambda {
+            bindings = <&lambda>;
+            key-positions = <7 8>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        full_lambda {
+            bindings = <&full_lambda>;
+            key-positions = <7 8 9>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
     };
 
     behaviors {
