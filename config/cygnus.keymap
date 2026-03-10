@@ -129,7 +129,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFT_PARANTHESIS";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
         };
 
         right_paranthesis: right_paranthesis {
