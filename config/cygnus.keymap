@@ -28,62 +28,6 @@
             layers = <0 1 2 3 4>;
         };
 
-        left_parantheses {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <28 29>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4>;
-        };
-
-        right_parantheses {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <30 31>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4>;
-        };
-
-        left_bracket {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <40 41>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4>;
-        };
-
-        right_bracket {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <42 43>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4>;
-        };
-
-        left_brace {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <16 17>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4>;
-        };
-
-        right_brace {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <18 19>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4>;
-        };
-
-        less_then {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <4 5>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4>;
-        };
-
-        greater_than {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <6 7>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1 2 3 4>;
-        };
-
         enter {
             bindings = <&kp ENTER>;
             key-positions = <31 32 33>;
@@ -108,6 +52,20 @@
         full_lambda {
             bindings = <&full_lambda>;
             key-positions = <7 8 9>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <29 28>;
+            require-prior-idle-ms = <200>;
+            layers = <0 1 2 3 4>;
+        };
+
+        redo {
+            bindings = <&kp LG(LS(Z))>;
+            key-positions = <30 31>;
             require-prior-idle-ms = <200>;
             layers = <0 1 2 3 4>;
         };
