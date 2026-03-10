@@ -119,6 +119,20 @@
             #binding-cells = <0>;
             bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>;
         };
+
+        left_paranthesis: left_paranthesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LEFT_PARANTHESIS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
+        };
+
+        right_paranthesis: right_paranthesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RIGHT_PARANTHESIS";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
+        };
     };
 
     macros {
