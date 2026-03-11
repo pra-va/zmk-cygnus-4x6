@@ -75,6 +75,17 @@
             key-positions = <5 6>;
             layers = <0>;
         };
+
+        full_paranthesis {
+            bindings = <&full_paranthesis>;
+            key-positions = <3 4>;
+            layers = <0>;
+        };
+
+        full_bracket {
+            bindings = <&full_brackets>;
+            key-positions = <7 8>;
+        };
     };
 
     behaviors {
@@ -172,6 +183,28 @@
             #binding-cells = <0>;
             bindings = <&kp P &kp U &kp B &kp L &kp I &kp C &kp SPACE &kp S &kp T &kp A &kp T &kp I &kp C &kp SPACE &kp F &kp I &kp N &kp A &kp L &kp SPACE>;
             label = "JAVA_CONSTANT";
+        };
+
+        full_paranthesis: full_paranthesis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LPAR &kp RPAR>,
+                <&macro_wait_time 30>,
+                <&kp LEFT_ARROW>;
+
+            label = "FULL_PARANTHESIS";
+        };
+
+        full_brackets: full_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_BRACKET &kp RIGHT_BRACKET>,
+                <&macro_wait_time 30>,
+                <&kp LEFT_ARROW>;
+
+            label = "FULL_BRACKETS";
         };
     };
 
