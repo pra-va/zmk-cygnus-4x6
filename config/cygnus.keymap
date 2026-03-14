@@ -86,6 +86,12 @@
             bindings = <&full_brackets>;
             key-positions = <7 8>;
         };
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <44 45>;
+            layers = <0 5>;
+        };
     };
 
     behaviors {
