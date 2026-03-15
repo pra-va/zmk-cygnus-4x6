@@ -223,14 +223,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_R_BRACE";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACE>, <&kp AT>;
+            bindings = <&kp RIGHT_BRACE>, <&todo_pv>;
         };
 
         td_greater_than: td_greater_than {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_GREATER_THAN";
             #binding-cells = <0>;
-            bindings = <&kp GREATER_THAN>, <&kp EXCLAMATION>;
+            bindings = <&kp GREATER_THAN>, <&javadoc>;
         };
     };
 
@@ -252,7 +252,11 @@
         full_lambda: full_lambda {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp SPACE &kp MINUS &kp GT &kp SPACE &kp LBRC &kp RBRC &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW>;
+            bindings =
+                <&kp LPAR &kp RPAR &kp SPACE &kp MINUS &kp GT &kp SPACE &kp LBRC &kp RBRC>,
+                <&macro_wait_time 30>,
+                <&kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW &kp LEFT_ARROW>;
+
             label = "FULL_LAMBDA";
         };
 
@@ -334,7 +338,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&td_tilde                       &td_less_than      &td_l_brace       &td_l_bracket     &td_l_paranthesis   &td_equals     &td_asterisk     &td_r_paranthesis   &td_r_bracket      &td_r_brace        &td_greater_than            &kp PERCENT
+&td_tilde                       &td_less_than      &td_l_brace       &td_l_bracket     &td_l_paranthesis   &td_equals     &td_asterisk     &td_r_paranthesis   &td_r_bracket      &td_r_brace        &td_greater_than            &kp LG(TAB)
 &kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T          &kp Y            &kp U               &kp I              &kp O              &kp P                       &kp MINUS
 &ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G          &kp H            &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SEMICOLON  &kp SQT
 &to 5                           &kp Z              &kp X             &kp C             &kp V               &kp B          &kp N            &kp M               &kp COMMA          &kp DOT            &kp SLASH                   &kp BACKSLASH
@@ -367,11 +371,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp N1         &kp AT_SIGN       &kp HASH          &kp DOLLAR         &kp PERCENT    &kp CARET      &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
-&kp TILDE  &kp EXCL       &kp AT            &kp HASH          &kp DLLR           &kp PRCNT      &kp CARET      &kp KP_N7      &kp KP_N8     &kp KP_N9             &kp SLASH              &kp ASTERISK
-&trans     &kp LESS_THAN  &kp GREATER_THAN  &kp EXCL          &kp EQUAL          &kp PIPE       &kp AMPERSAND  &kp KP_N4      &kp KP_N5     &kp KP_N6             &kp MINUS              &kp PLUS
-&trans     &kp SLASH      &kp BACKSLASH     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp GRAVE      &kp ASTERISK   &kp KP_N1      &kp KP_N2     &kp KP_N3             &kp KP_N0              &kp TILDE
-                                            &trans            &trans             &trans         &trans         &trans         &trans
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH          &kp DOLLAR         &kp PERCENT    &kp CARET      &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
+&kp TILDE  &kp EXCL         &kp AT            &kp HASH          &kp DLLR           &kp PRCNT      &kp CARET      &kp KP_N7      &kp KP_N8     &kp KP_N9             &kp SLASH              &kp ASTERISK
+&trans     &kp LESS_THAN    &kp GREATER_THAN  &kp EXCL          &kp EQUAL          &kp PIPE       &kp AMPERSAND  &kp KP_N4      &kp KP_N5     &kp KP_N6             &kp MINUS              &kp PLUS
+&trans     &kp SLASH        &kp BACKSLASH     &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp GRAVE      &kp ASTERISK   &kp KP_N1      &kp KP_N2     &kp KP_N3             &kp KP_N0              &kp TILDE
+                                              &trans            &trans             &trans         &trans         &trans         &trans
             >;
         };
 
