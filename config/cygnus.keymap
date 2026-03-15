@@ -241,6 +241,96 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        less_than: less_than {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LESS_THAN";
+            bindings = <&kp LESS_THAN>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        left_brace: left_brace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_BRACE";
+            bindings = <&kp LEFT_BRACE>, <&kp AT_SIGN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        left_bracket: left_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_BRACKET";
+            bindings = <&kp LEFT_BRACKET>, <&kp HASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        left_paranthesis: left_paranthesis {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_PARANTHESIS";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        equals: equals {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EQUALS";
+            bindings = <&kp EQUAL>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        asterisk: asterisk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ASTERISK";
+            bindings = <&kp ASTERISK>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        right_paranthesis: right_paranthesis {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_PARANTHESIS";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        right_bracket: right_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_BRACKET";
+            bindings = <&kp RIGHT_BRACKET>, <&kp ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        right_brace: right_brace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_BRACE";
+            bindings = <&kp RIGHT_BRACE>, <&todo_pv>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        greater_than: greater_than {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GREATER_THAN";
+            bindings = <&kp GREATER_THAN>, <&javadoc>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -347,7 +437,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&td_tilde                       &td_less_than      &td_l_brace       &td_l_bracket     &td_l_paranthesis   &td_equals     &td_asterisk     &td_r_paranthesis   &td_r_bracket      &td_r_brace        &td_greater_than               &kp LG(TAB)
+&td_tilde                       &less_than         &left_brace       &left_bracket     &left_paranthesis   &equals        &asterisk        &right_paranthesis  &right_bracket     &right_brace       &greater_than                  &kp LG(TAB)
 &kp TAB                         &kp Q              &kp W             &kp E             &kp R               &kp T          &kp Y            &kp U               &kp I              &kp O              &kp P                          &or_and
 &ht_hyper LS(LA(LC(LGUI))) ESC  &hrm_left LCTRL A  &hrm_left LALT S  &hrm_left LGUI D  &hrm_left LSHIFT F  &kp G          &kp H            &hrm_right RSHFT J  &hrm_right RGUI K  &hrm_right RALT L  &hrm_right RCTRL SINGLE_QUOTE  &kp MINUS
 &to 5                           &kp Z              &kp X             &kp C             &kp V               &kp B          &kp N            &kp M               &kp COMMA          &kp DOT            &kp SLASH                      &kp BACKSLASH
