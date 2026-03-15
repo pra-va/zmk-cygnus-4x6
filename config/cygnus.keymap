@@ -78,19 +78,28 @@
 
         full_paranthesis {
             bindings = <&full_paranthesis>;
-            key-positions = <3 4>;
+            key-positions = <4 7>;
             layers = <0>;
         };
 
         full_bracket {
             bindings = <&full_brackets>;
-            key-positions = <7 8>;
+            key-positions = <8 3>;
+        };
+
+        full_braces {
+            bindings = <&full_braces>;
+            key-positions = <2 9>;
+        };
+
+        full_less_greater {
+            bindings = <&full_less_greater>;
+            key-positions = <1 10>;
         };
 
         semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <44 45>;
-            layers = <0 5>;
         };
     };
 
@@ -288,6 +297,28 @@
                 <&kp LEFT_ARROW>;
 
             label = "FULL_BRACKETS";
+        };
+
+        full_braces: full_braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_BRACE &kp RIGHT_BRACE>,
+                <&macro_wait_time 30>,
+                <&kp LEFT_ARROW>;
+
+            label = "FULL_BRACES";
+        };
+
+        full_less_greater: full_less_greater {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LESS_THAN &kp GREATER_THAN>,
+                <&macro_wait_time 30>,
+                <&kp LEFT_ARROW>;
+
+            label = "FULL_LESS_GREATER";
         };
     };
 
